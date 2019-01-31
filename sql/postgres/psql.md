@@ -1,17 +1,5 @@
 # psql
 
-### initial quick set up
->$sudo su - postgres
->$psql  # or $sudo -u postgres psql
-```postgresplsql
-ALTER USER postgres PASSWORD 'postgres'
-CREATE SCHEMA test
-CREATE USER xxxx CREATEDB CREATEUSER PASSWORD 'xxxx'
-GRANT ALL ON SCHEMA test TO xxxx
-GRANT ALL ON ALL TABLES IN SCHEMA test TO xxxx
-```
-
-
 psql commands
 --------------------
 `\?`
@@ -95,3 +83,17 @@ psql commands
  `\z`             list table access permissions
 
  `\! [cmd]`       shell escape or command
+
+
+### playground quick set up
+>$ sudo su - postgres
+>$ psql
+# or
+>$ sudo -u postgres psql
+```postgresplsql
+ALTER USER postgres PASSWORD 'postgres'
+CREATE SCHEMA test
+CREATE USER xxxx CREATEDB CREATEUSER PASSWORD 'xxxx'
+GRANT ALL ON SCHEMA test TO xxxx
+GRANT ALL ON ALL TABLES IN SCHEMA test TO xxxx
+```
